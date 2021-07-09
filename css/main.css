@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+* {
+    /* COLORS */
+    
+    /* PRIMARY */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --Transparent-white : hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --Very-light-gray : hsl(0, 0%, 95%);        /* (background, headings, buttons) */
+
+
+    /* Settings */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:15px;
+}
+body {
+    background-color: var(--Very-light-gray);
+    max-width: 1440px;
+    margin: auto;
+}
+
+
+/* UTILITES */
+
+.wrapper {
+    margin: 8rem auto;
+    display: flex;
+    font-family: 'Lexend Deca', sans-serif;
+    width: 70%;
+}
+
+.card {
+    transition: transform .2s ease-in;
+
+}
+
+.card:hover {
+    transform:scale(1.05);
+    transform: translateY(-10px);
+}
+
+.card1{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-color: var(--Bright-orange);
+}
+
+.card2{
+    background-color: var(--Dark-cyan);
+}
+
+.card3{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--Very-dark-cyan);
+}
+
+.card-content {
+    color: var(--Very-light-gray);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+}
+
+.card-img {
+    border: 1px solid;
+    margin-top: 3rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: 'Big Shoulders Display', cursive;
+    margin: 1.5rem 0;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+button {
+    background-color: var(--Transparent-white);
+    margin-bottom: 1.5rem;
+    padding: 1.3rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.orange {
+    color: var(--Bright-orange);
+}
+
+.dark-cyan {
+    color: var(--Dark-cyan);
+}
+
+.darker-cyan {
+    color:  var(--Very-dark-cyan)
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (max-width: 375px) {
+    .wrapper {
+
+        flex-direction: column;
+        margin: 10rem auto 0 auto;
+    }
+    .card1{
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+    }
+    .card3{
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        border-top-right-radius: 0;
+    }
+}
+
+/* font-family: 'Big Shoulders Display', cursive;
+
+*/
